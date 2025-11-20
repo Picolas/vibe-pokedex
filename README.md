@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pokemon - Pokedex Next.js
 
-## Getting Started
+Application Pokedex complète développée avec Next.js, utilisant l'API [PokeAPI](https://pokeapi.co/) pour afficher et comparer les informations des Pokémons.
 
-First, run the development server:
+## À propos
+
+Cette application est une **application de test** qui a été **entièrement générée par IA** (Vide codé). Aucune ligne de code n'a été écrite manuellement - tout le code source a été produit automatiquement par un assistant IA.
+
+## Fonctionnalités
+
+- **Recherche de Pokémons** : Recherche par nom ou ID avec suggestions en temps réel
+- **Affichage des détails** : Fiche complète avec statistiques, types, capacités
+- **Comparaison** : Comparaison côte à côte de deux Pokémons avec graphiques radar
+- **Catalogue infini** : Parcours paginé avec lazy loading au scroll
+- **Interface moderne** : Design épuré avec Shadcn UI et animations Motion
+
+## Technologies utilisées
+
+- **Next.js 16** (App Router)
+- **TypeScript** (strict mode, aucun `any`)
+- **React Query** (TanStack Query) pour la gestion des données
+- **Jotai** pour l'état global (comparaison)
+- **Zod** pour la validation
+- **Shadcn UI** pour les composants
+- **Motion** pour les animations
+- **Recharts** pour les graphiques radar
+- **TanStack React Form** pour les formulaires
+
+## Démarrage
+
+Installer les dépendances :
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Lancer le serveur de développement :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-## Learn More
+## Structure du projet
 
-To learn more about Next.js, take a look at the following resources:
+```
+pokemon-exalt/
+├── app/                    # Pages Next.js (App Router)
+│   ├── page.tsx           # Accueil
+│   ├── search/            # Page de recherche
+│   ├── pokemon/[id]/      # Page détail Pokémon
+│   └── compare/           # Page de comparaison
+├── components/
+│   ├── pokemon/           # Composants Pokémon réutilisables
+│   ├── layout/            # Layout et sidebar
+│   └── ui/                # Composants Shadcn UI
+├── lib/
+│   ├── api/               # Client API PokeAPI
+│   ├── hooks/             # Hooks React Query
+│   ├── store/             # Store Jotai
+│   ├── types/             # Types TypeScript
+│   └── validators/        # Schémas Zod
+└── components.json        # Configuration Shadcn
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Principes de développement
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Clean Code** : Code propre et maintenable
+- **SOLID** : Respect des principes SOLID
+- **TypeScript strict** : Aucun `any`, types explicites partout
+- **Server Components** : Utilisation par défaut, Client Components uniquement si nécessaire
+- **Performance** : Optimisations avec React Query, lazy loading, memoization
 
-## Deploy on Vercel
+## API
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Cette application utilise l'API publique [PokeAPI](https://pokeapi.co/) pour récupérer les données des Pokémons.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Note importante
+
+⚠️ **Cette application est un projet de test/démonstration entièrement généré par IA. Elle n'est pas destinée à un usage en production.**

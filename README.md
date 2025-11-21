@@ -2,82 +2,82 @@ Demo at [pokedex.nicolas.nz](https://pokedex.nicolas.nz/)
 
 # Pokemon - Pokedex Next.js
 
-Application Pokedex complète développée avec Next.js, utilisant l'API [PokeAPI](https://pokeapi.co/) pour afficher et comparer les informations des Pokémons.
+Complete Pokedex application built with Next.js, using the [PokeAPI](https://pokeapi.co/) to display and compare Pokémon information.
 
-## À propos
+## About
 
-Cette application est une **application de test** qui a été **entièrement générée par IA** (Vide codé). Aucune ligne de code n'a été écrite manuellement - tout le code source a été produit automatiquement par un assistant IA.
+This application is a **test application** that was **entirely AI-generated** (AI-coded). No line of code was written manually - all source code was automatically produced by an AI assistant.
 
-## Fonctionnalités
+## Features
 
-- **Recherche de Pokémons** : Recherche par nom ou ID avec suggestions en temps réel
-- **Affichage des détails** : Fiche complète avec statistiques, types, capacités
-- **Comparaison** : Comparaison côte à côte de deux Pokémons avec graphiques radar
-- **Catalogue infini** : Parcours paginé avec lazy loading au scroll
-- **Interface moderne** : Design épuré avec Shadcn UI et animations Motion
+- **Pokémon Search** : Search by name or ID with real-time suggestions
+- **Detail Display** : Complete card with statistics, types, abilities
+- **Comparison** : Side-by-side comparison of two Pokémons with radar charts
+- **Infinite Catalog** : Paginated browsing with lazy loading on scroll
+- **Modern Interface** : Clean design with Shadcn UI and Motion animations
 
-## Technologies utilisées
+## Technologies Used
 
 - **Next.js 16** (App Router)
-- **TypeScript** (strict mode, aucun `any`)
-- **React Query** (TanStack Query) pour la gestion des données
-- **Jotai** pour l'état global (comparaison)
-- **Zod** pour la validation
-- **Shadcn UI** pour les composants
-- **Motion** pour les animations
-- **Recharts** pour les graphiques radar
-- **TanStack React Form** pour les formulaires
+- **TypeScript** (strict mode, no `any`)
+- **React Query** (TanStack Query) for data management
+- **Jotai** for global state (comparison)
+- **Zod** for validation
+- **Shadcn UI** for components
+- **Motion** for animations
+- **Recharts** for radar charts
+- **TanStack React Form** for forms
 
-## Démarrage
+## Getting Started
 
-Installer les dépendances :
+Install dependencies:
 
 ```bash
 pnpm install
 ```
 
-Lancer le serveur de développement :
+Run the development server:
 
 ```bash
 pnpm dev
 ```
 
-Ouvrir [http://localhost:3000](http://localhost:3000) dans votre navigateur.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Structure du projet
+## Project Structure
 
 ```
 pokemon-exalt/
-├── app/                    # Pages Next.js (App Router)
-│   ├── page.tsx           # Accueil
-│   ├── search/            # Page de recherche
-│   ├── pokemon/[id]/      # Page détail Pokémon
-│   └── compare/           # Page de comparaison
+├── app/                    # Next.js pages (App Router)
+│   ├── page.tsx           # Home
+│   ├── search/            # Search page
+│   ├── pokemon/[id]/      # Pokémon detail page
+│   └── compare/           # Comparison page
 ├── components/
-│   ├── pokemon/           # Composants Pokémon réutilisables
-│   ├── layout/            # Layout et sidebar
-│   └── ui/                # Composants Shadcn UI
+│   ├── pokemon/           # Reusable Pokémon components
+│   ├── layout/            # Layout and sidebar
+│   └── ui/                # Shadcn UI components
 ├── lib/
-│   ├── api/               # Client API PokeAPI
-│   ├── hooks/             # Hooks React Query
-│   ├── store/             # Store Jotai
-│   ├── types/             # Types TypeScript
-│   └── validators/        # Schémas Zod
-└── components.json        # Configuration Shadcn
+│   ├── api/               # PokeAPI client
+│   ├── hooks/             # React Query hooks
+│   ├── store/             # Jotai store
+│   ├── types/             # TypeScript types
+│   └── validators/        # Zod schemas
+└── components.json        # Shadcn configuration
 ```
 
-## Principes de développement
+## Development Principles
 
-- **Clean Code** : Code propre et maintenable
-- **SOLID** : Respect des principes SOLID
-- **TypeScript strict** : Aucun `any`, types explicites partout
-- **Server Components** : Utilisation par défaut, Client Components uniquement si nécessaire
-- **Performance** : Optimisations avec React Query, lazy loading, memoization
+- **Clean Code** : Clean and maintainable code
+- **SOLID** : Adherence to SOLID principles
+- **TypeScript strict** : No `any`, explicit types everywhere
+- **Server Components** : Default usage, Client Components only when necessary
+- **Performance** : Optimizations with React Query, lazy loading, memoization
 
 ## API
 
-Cette application utilise l'API publique [PokeAPI](https://pokeapi.co/) pour récupérer les données des Pokémons.
+This application uses the public [PokeAPI](https://pokeapi.co/) to fetch Pokémon data.
 
-## Note importante
+## Important Note
 
-⚠️ **Cette application est un projet de test/démonstration entièrement généré par IA. Elle n'est pas destinée à un usage en production.**
+⚠️ **This application is a test/demonstration project entirely generated by AI. It is not intended for production use.**
